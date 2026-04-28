@@ -1,23 +1,20 @@
 public class UniversityClient {
     public static void main(String[] args) {
-        // Create individual entities
-        Teacher t1 = new Teacher("Dr. Smith", "Computer Science", 50000);
-        Student s1 = new Student("Alice", "CS101", 15000);
-        Student s2 = new Student("Bob", "CS102", 15000);
+        // Create instances [cite: 24]
+        Teacher profX = new Teacher("Charles Xavier", "Genetics", 80000);
+        Student cyclops = new Student("Scott Summers", "S001", 20000);
 
-        // Organize into structure
-        Department csDept = new Department("Computer Science");
-        csDept.add(t1);
-        csDept.add(s1);
-        csDept.add(s2);
+        Department mutantStudies = new Department("Mutant Studies");
+        mutantStudies.add(profX);
+        mutantStudies.add(cyclops);
 
-        College engineering = new College("College of Engineering");
-        engineering.add(csDept);
+        College neu = new College("New Era University");
+        neu.add(mutantStudies);
 
-        // Display results [cite: 26, 27, 28]
+        // Task Requirements [cite: 26, 27, 28]
         System.out.println("--- University Hierarchy ---");
-        engineering.displayDetails("");
-        System.out.println("\nTotal Students: " + engineering.getStudentCount());
-        System.out.println("Total Budget: " + engineering.getBudget());
+        neu.displayDetails("");
+        System.out.println("\nTotal Students: " + neu.getStudentCount());
+        System.out.println("Total Budget: " + neu.getBudget());
     }
 }
